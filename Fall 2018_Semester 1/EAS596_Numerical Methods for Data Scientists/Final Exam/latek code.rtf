@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs24 \cf0 \\documentclass[a4paper]\{article\}\
+\
+\\usepackage\{fullpage\} % Package to use full page\
+\\usepackage\{parskip\} % Package to tweak paragraph skipping\
+\\usepackage\{tikz\} % Package for drawing\
+\\usepackage\{amsmath\}\
+\\usepackage\{hyperref\}\
+\
+\\title\{Final Exam, Part II : EAS 596\}\
+\\author\{Shubham Sharma \\\\Person No.: 50290293 \\\\ Professor: Dr. David Salac\}\
+\\begin\{document\}\
+\
+\\maketitle\
+\
+\\textbf\{Question 1:\}\
+(a) The solution of the initial value problem using a fourth order Runge-Kunga\
+method: $ode45$ comes out to be $0.367891$ at time step number $57$.\
+\
+(b)\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=11.5cm]\{1b.jpg\}\
+\\end\{center\}\
+\\end\{figure\}\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=12cm]\{1c.jpg\}\
+\\end\{center\}\
+\\end\{figure\}\
+\\newpage\
+(d) The solution obtained using $2$ point Guass Quadrature rule is: $0.367885$ for number of guass intervals =  $4$. Thus, the number of points needed for $2$ point Guass Quadrature Rule to get within 1\\% accuracy of the exact solution is $4$ whereas the number of timesteps required using $ode45$ is $57$. The function to calculate Guass Quadrature is used from the homework solutions.\
+\
+\\newpage\
+\\textbf\{Question 2:\}\
+\
+(a) \
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=15cm]\{2a.jpg\}\
+\\end\{center\}\
+\\end\{figure\}\
+\
+(b) ii: The function newton\\_sys.m, to solve the root problem for the given nonlinear system of equation using Newton's method is taken from the homework solutions.\
+\
+(b) iii: The required plot is shown in figures \\ref\{6\}.\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=16cm]\{2biii.png\}\
+\\end\{center\}\
+\\caption\{Q2(b) iii: Plot for \\theta_1, \\theta_2, \\(x\\)  vs.  \\(t\\)\}\\label\{6\}\
+\\end\{figure\}\
+\
+(b) vi: The work done by the piston is $-29.592988$.\
+\
+(b) v: The plot for computed piston force vs. \\(x\\) is shown in figure \\ref\{7\}.\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=16cm]\{2bv.png\}\
+\\end\{center\}\
+\\caption\{Q2(b) v: Computed piston force vs. \\(x\\)\}\\label\{7\}\
+\\end\{figure\}\
+\
+(c) The coefficients $c_1$ and $c_2$ are $6.2185$ and $0.9826$ respectively. The plot for the data and the best curve fit is shown in figure \\ref\{8\}.\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=15cm]\{2c.png\}\
+\\end\{center\}\
+\\caption\{Q2(c): Data and the best curve fit for $\\theta_1$ using least square regression analysis\}\\label\{8\}\
+\\end\{figure\}\
+\
+(d) The work done by the piston when using the best curve fit values for $\\theta_1$ is $-20.102428$. The required plots are shown in figures \\ref\{9\} and \\ref\{10\}.\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=15cm]\{2diii.png\}\
+\\end\{center\}\
+\\caption\{Q2d iii: Plot for \\theta_1, \\theta_2, \\(x\\)  vs.  \\(t\\) in case of best curve fit values\}\\label\{9\}\
+\\end\{figure\}\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=15cm]\{2d.png\}\
+\\end\{center\}\
+\\caption\{Q2d v: Computed piston force vs. \\(x\\) in case of best curve fit values\}\\label\{10\}\
+\\end\{figure\}\
+\
+\\newpage\
+\
+\\textbf\{Question 3:\}\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=15cm]\{3a.jpg\}\
+\\end\{center\}\
+\\end\{figure\}\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=15cm]\{3c.jpg\}\
+\\end\{center\}\
+\\end\{figure\}\
+\
+(d) The analytic solution for $\\vec\{q\}$ corresponding to $\\vec\{p\}$ = $(4,2)$ is (0.8944, 0.447217) which is same as the one obtained using $fminbnd$ which is $(0.894427, 0.447214)$. The distance between $\\vec\{q\}$ and $\\vec\{p\}$ in both the cases is 3.4721.\
+\
+(e) The closest point $\\vec\{q\}$ to the point $\\vec\{p\}$ using Newtons method(initial guess is taken to be 0.5) is $(0.893410, 0.449242)$ which is quite similar to the previous case.\
+\
+(f) It is clear from figure \\ref\{11\} that different points are obtained for different initial guesses. \
+\\newline\
+\\newline\
+Closest point $\\vec\{q\}$ to the point $\\vec\{p\}$ using Newton's method for Initial Guess s = 0: (0.943991, 0.381088) (red point in the graph). This is the best guess and we get the point on the interface which is closest to the point $\\vec\{p\}$. The initial guess in this case is (1.5,0).\
+\\newline\
+\\newline\
+Closest point $\\vec\{q\}$ to the point $\\vec\{p\}$ using Newton's method for Initial Guess s = $\\pi/2$: (0.353375, 0.353733) (blue point in the graph). In this case, the solution gets trapped at a local maxima, when we start at an initial guess of (0,1.5).\
+\\newline\
+\\newline\
+Closest point $\\vec\{q\}$ to the point $\\vec\{p\}$ using Newton's method for Initial Guess s = 5$\\pi/4$: (-0.353553, -0.353553) (green point in the graph). In this case, the solution gets trapped at a local minima, when we start at an initial guess of ($-1/2\\sqrt(2)$,$-1/2\\sqrt(2)$).\
+\
+The required plot is shown in figures \\ref\{11\}.\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=15cm]\{3f.png\}\
+\\end\{center\}\
+\\caption\{Q3f : Figure with interface and solutions for $\\vec\{q\}$ for different initial guesses\}\\label\{11\}\
+\\end\{figure\}\
+\
+\\end\{document\}}
