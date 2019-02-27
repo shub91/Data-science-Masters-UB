@@ -1,8 +1,8 @@
 # Data-science-Masters-UB
 Assignments, reference materials and solutions
 
-Courses:
-Fall 2018 (Semester 1)
+# Courses:
+Fall 2018 (Semester 1) <\br>
 EAS 596 Numerical Mathematics for Computing and Data Scientists by Prof. David Salac
 CSE 506 Statistical Data Mining I (Supervised Learning) by Prof. Rachel H. Blair
 EAS 595 Introduction to Probability Theory for Data Science by Prof. Ehsan Esfahani
