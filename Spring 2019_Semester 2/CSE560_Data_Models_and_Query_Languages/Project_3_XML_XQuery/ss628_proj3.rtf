@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww25360\viewh16940\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (: Project 3 :)\
+(: Shubham Sharma, ss628 :)\
+ \
+(: Solution 2.1 - Names of all the employees of the departments Sales or IT and their salaries in those departments :)\
+\
+let $n := doc("/db/emps.xml") (: creating doc node :)\
+for $d in $n/emps/employee/department\
+where $d/name = "Sales" or $d/name = "IT"\
+return string-join(($d/../@ename, $d/salary), " has salary:  ")\
+\
+(: Solution 2.2 - Names of the departments that have the average salary greater than 5000 :)\
+\
+let $ret := distinct-values(\
+    for $dept in //department\
+        where avg($dept/salary) > 5000\
+        return $dept/name/string()\
+)\
+return $ret\
+\
+(: Solution 2.3 XQuery query whose input is an XML document valid with respect to the given DTD and whose output is an equivalent XML document in which the employees and their salaries are listed under their departments :)\
+\
+let $n := doc("/db/emps.xml") (: creating doc node :)\
+let $l := distinct-values($n//department/name)\
+return <depts> \{for $d in $l\
+return <department name='\{$d\}'>\
+    \{\
+        for $e in $n//department[name = $d]/..\
+        return <employee>\
+            <ename>\{$e/@ename/string()\}</ename>\
+            <salary>\{$e/department[name = $d]/salary/string()\}</salary></employee>\
+    \}</department>\}</depts>\
+    \
+(: DTD for the returned document :)\
+\
+\
+<!DOCTYPE depts[\
+    <!ELEMENT depts (department*)>\
+    <!ELEMENT department (employee+)>\
+    <!ATTLIST department name CDATA #REQUIRED>\
+    <!ELEMENT employee (ename, salary)>\
+    <!ELEMENT ename (#PCDATA)>\
+    <!ELEMENT salary (#PCDATA)>\
+    ]>\
+\
+}
